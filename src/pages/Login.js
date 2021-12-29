@@ -190,6 +190,7 @@ const Login = () => {
           displayName: formState.inputs.displayName.value,
         });
       } catch (error) {
+        console.log(error)
         setInvalidLogin(true)
         setTimeout(() => {
           setInvalidLogin(false)
