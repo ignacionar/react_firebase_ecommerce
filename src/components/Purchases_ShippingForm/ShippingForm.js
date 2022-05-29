@@ -47,7 +47,7 @@ export const FormTitle = styled.p`
 export const ShippingForm = () => {
   const currentUser = useSelector((state) => state.user.currentUser);
   const { cartItems } = useSelector((state) => state.cart);
-  const { purchased, loading } = useSelector((state) => state.orders);
+  const { purchased } = useSelector((state) => state.orders);
   const subTotal = cartItems.reduce((acc, item) => {
     return acc + item.price * item.quantity;
   }, 0);

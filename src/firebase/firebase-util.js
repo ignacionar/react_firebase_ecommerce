@@ -29,7 +29,6 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
 
   const userRef = firestore.doc(`users/${userAuth.uid}`);
   const snapShot = await userRef.get();
-  console.log(additionalData);
 
   if (!snapShot.exists) {
     const { displayName, email } = userAuth;
@@ -46,7 +45,6 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
       console.log('Error creating user', error.message);
     }
   }
-  console.log(userAuth)
   return userRef;
 };
 
@@ -105,9 +103,7 @@ export const signInWithGoogle = () => {
   const provider = new firebase.auth.GoogleAuthProvider();
   firebase.auth().signInWithPopup(provider)
   .then((re) => {
-    console.log(re);
   })
   .catch((err) => {
-    console.log(err)
   })
 }

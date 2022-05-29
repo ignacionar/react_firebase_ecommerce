@@ -69,6 +69,7 @@ const Camisas = () => {
             if (product.section === 'Camisas' && product.name.includes(search) && product.color.includes(filterColor) && product.type.includes(filterType)) {
               return (
                 <StyledCard name={product.name} 
+                key={product.name}
                 onClick={() => {
                 passObject(product)
                 sethideFilters(true)}}>
@@ -77,7 +78,7 @@ const Camisas = () => {
                 </StyledCard>
               )
             } 
-           
+            return null;
           }) 
           : <StyledProductsPopups>
               <img src={displayProduct.img} alt={displayProduct.img}/>

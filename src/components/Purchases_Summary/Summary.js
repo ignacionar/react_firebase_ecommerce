@@ -84,9 +84,9 @@ const StyledLoading = styled.div`
   animation: ${Spin} 2s linear infinite;
 `;
 
-export const Summary = ({isValid, envio, subTotal}) => {
+export const Summary = ({ envio, subTotal}) => {
 
-  const { purchased, loading } = useSelector((state) => state.orders);
+  const { loading } = useSelector((state) => state.orders);
 
   return (
   <CardContainer>

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
 import Login from './pages/Login';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { auth, createUserProfileDocument } from "./firebase/firebase-util";
 import * as userActions from './redux/User/user-actions';
 import Pantalones from './pages/Pantalones';
