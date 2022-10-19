@@ -8,7 +8,6 @@ import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg
 const StyledFooter = styled.footer`
   background-color: antiquewhite;
 	filter: drop-shadow(0 0 5px #0003);
-  position: fixed;
   bottom: 0;
   width: 100%;
 `;
